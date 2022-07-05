@@ -5,6 +5,7 @@ typedef struct ListNodeType
 {
 	int destination;
 	int weight;
+	int	visited;
 	struct ListNodeType* pLink;
 } ListNode;
 

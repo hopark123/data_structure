@@ -70,6 +70,7 @@ int addVertexAG(ArrayGraph* pGraph, int vertexID)
 		return (0);
 	pGraph->pVertex[vertexID] = 1;
 	pGraph->currentVertexCount++;
+	return 1;
 }
 
 int addEdgeAG(ArrayGraph* pGraph, int fromVertexID, int toVertexID)
@@ -125,6 +126,7 @@ int removeEdgeAG(ArrayGraph* pGraph, int fromVertexID, int toVertexID)
 		return (0); 
 	pGraph->ppAdjEdge[toVertexID][fromVertexID] = 0;
 	pGraph->ppAdjEdge[fromVertexID][toVertexID] = 0;
+	return 1;
 }
 
 void displayArrayGraph(ArrayGraph* pGraph)

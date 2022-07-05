@@ -14,6 +14,7 @@ LinkedList* createLinkedList(void)
 		return (NULL);
 	dummy->destination = 0;
 	dummy->weight = 0;
+	dummy->visited = 0;
 	dummy->pLink = NULL;
 	list->headerNode = dummy;
 	return (list);
@@ -48,6 +49,7 @@ int addLLElement(LinkedList* pList, int position, ListNode element)
 		return (ERROR);
 	new->destination = element.destination;
 	new->weight = element.weight;
+	new->visited = element.visited;
 
 	if (position == 0)
 		prev = pList->headerNode;
